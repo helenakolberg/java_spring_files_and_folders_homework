@@ -14,7 +14,7 @@ public class Folder {
 
     @Column(name = "title")
     private String title;
-    
+
     private User user;
     private List<File> files;
 
