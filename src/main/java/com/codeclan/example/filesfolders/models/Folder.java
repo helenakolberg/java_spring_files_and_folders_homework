@@ -15,7 +15,11 @@ public class Folder {
     @Column(name = "title")
     private String title;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
+
+    @OneToMany(mappedBy = "folder")
     private List<File> files;
 
     public Folder(String title, User user) {
