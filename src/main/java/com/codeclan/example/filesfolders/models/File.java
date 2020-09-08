@@ -18,7 +18,7 @@ public class File {
 
     @Column(name = "size")
     private int size;
-    
+
     private Folder folder;
 
     public File(String name, String extension, int size, Folder folder) {
