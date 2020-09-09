@@ -13,30 +13,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class FilesfoldersApplicationTests {
 
-	@Autowired
-	UserRepository userRepository;
-
-	@Autowired
-	FileRepository fileRepository;
-
-	@Autowired
-	FolderRepository folderRepository;
 
 	@Test
 	void contextLoads() {
 	}
-
-	@Test
-	public void create() {
-		User helena = new User("Helena");
-		userRepository.save(helena);
-
-		Folder javaFolder = new Folder("java_stuff", helena);
-		folderRepository.save(javaFolder);
-
-		File helenasJavaFile = new File("pirates", "java", 22, javaFolder);
-		fileRepository.save(helenasJavaFile);
-	}
-
 
 }
